@@ -20,22 +20,25 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
   <!-- Google-friendly Person structured data. Replace tanmay-sheth-portfolio.vercel.app after deployment. -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
     "@type": "Person",
     "name": "Tanmay Sheth",
+    "alternateName": "tanmaysheth1310",
     "url": "https://tanmay-sheth-portfolio.vercel.app/",
     "image": "https://tanmay-sheth-portfolio.vercel.app/static/images/profile.png",
     "jobTitle": "Computer Science Student",
-    "description": "B.Tech Computer Science and Engineering (AI-ML) student at Adani University, web developer and AI/ML enthusiast.",
+    "description": "B.Tech Computer Science and Engineering (AI-ML) student at Adani University, web developer and AI/ML enthusiast from Ahmedabad.",
     "email": "mailto:tanmaysheth12@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ahmedabad",
       "addressCountry": "IN"
     },
-    "alumniOf": {
+    "affiliation": {
       "@type": "CollegeOrUniversity",
       "name": "Adani University"
     },
@@ -45,7 +48,8 @@
       "https://github.com/tanmaysheth1310"
     ]
   }
-  </script>
+}
+</script>
 </head>
 
 <body>
