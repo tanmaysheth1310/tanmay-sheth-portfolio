@@ -1,6 +1,6 @@
-# Tanmay Sheth — Personal Portfolio
+# Hi, I'm Tanmay Sheth 👋
 
-Flask-based, responsive personal portfolio designed for deployment on Vercel.
+### B.Tech CSE (AI-ML) Student | Web Developer | AI/ML Enthusiast
 
 ## Project structure
 
