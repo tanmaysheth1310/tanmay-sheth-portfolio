@@ -1,18 +1,6 @@
-from flask import Flask, 
-render_template , Response
+from flask import Flask, render_template
 
 app = Flask(__name__)
-@app.route("/robots.txt")
-def robots():
-    return response(
-        """user-agent: *
-allow: /
-
-sitemap:
-https://tanmay-sheth-portfolio.vercel.app/sitemap.xml
-""",
-        mimetype="text/plan"
-    )
 
 @app.route("/")
 def home():
