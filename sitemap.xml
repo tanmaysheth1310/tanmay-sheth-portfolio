@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Replace YOUR-DOMAIN.com with your deployed domain before production use. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DOMAIN.com/</loc></url>
+  <url><loc>https://tanmay-sheth-portfolio.vercel.app//</loc></url>
 </urlset>
