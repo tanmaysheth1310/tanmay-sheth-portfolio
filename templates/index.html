@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Tanmay Sheth | Computer Science Student, Web Developer & AI/ML Enthusiast</title>
+  <meta name="title" content="Tanmay Sheth | Computer Science Student, Web Developer & AI/ML Enthusiast">
+  <meta name="description" content="Official portfolio of Tanmay Sheth — B.Tech Computer Science and Engineering (AI-ML) student at Adani University, web developer, and AI/ML enthusiast from Ahmedabad, Gujarat.">
+  <meta name="author" content="Tanmay Sheth">
+  <meta name="keywords" content="Tanmay Sheth, Adani University, Computer Science, Web Developer, AI ML, Python, Portfolio, Ahmedabad">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+  <meta property="og:title" content="Tanmay Sheth | Computer Science Student & Developer Portfolio">
+  <meta property="og:description" content="B.Tech CSE (AI-ML) student at Adani University, web developer and AI/ML enthusiast. Explore projects, certificates, and interactive developer CLI.">
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/static/images/profile.jpeg">
+
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://YOUR-DOMAIN.com/">
+  <meta property="twitter:title" content="Tanmay Sheth | Developer Portfolio">
+  <meta property="twitter:description" content="Computer Science & Engineering (AI-ML) student, web developer and AI/ML enthusiast.">
+  <meta property="twitter:image" content="https://YOUR-DOMAIN.com/static/images/profile.jpeg">
+
+  <!-- Google Site Verification Token (Preserved) -->
+  <!-- Verification file: google6a61e62378e61012.html -->
+  <meta name="google-site-verification" content="google6a61e62378e61012">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- Schema.org Person Structured Data (Google Rich Results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tanmay Sheth",
+    "url": "https://YOUR-DOMAIN.com/",
+    "image": "https://YOUR-DOMAIN.com/static/images/profile.png",
+    "jobTitle": "Computer Science Student & Web Developer",
+    "description": "B.Tech Computer Science and Engineering (AI-ML) student at Adani University, web developer and AI/ML enthusiast.",
+    "email": "mailto:tanmaysheth12@gmail.com",
+    "telephone": "+919274213780",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Adani University"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/tanmay-sheth-5a4415384/",
+      "https://www.instagram.com/tanmay_sheth1310/",
+      "https://github.com/tanmaysheth1310"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Ambient Interactive Canvas Background -->
+  <canvas id="ambientCanvas" aria-hidden="true"></canvas>
+
+  <!-- Interactive Luminous Cursor Trail Canvas (Where cursor moves, animation follows!) -->
+  <canvas id="cursorTrailCanvas" aria-hidden="true"></canvas>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Custom Fluid Cursor (Desktop Only) -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <div class="site-wrapper">
+    <!-- Sticky Glass Navigation Header -->
+    <header class="navbar-wrapper" role="banner">
+      <div class="container navbar">
+        <a class="brand-logo" href="#home" aria-label="Tanmay Sheth Home">
+          TS<span class="brand-dot">.</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#terminal">Terminal</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+
+        <!-- Navigation Actions (Command Palette & Theme Toggle) -->
+        <div class="nav-actions">
+          <button class="cmd-palette-btn" id="cmdPaletteTrigger" aria-label="Open Command Palette" title="Command Palette (Ctrl + K)">
+            <span aria-hidden="true">🔍</span>
+            <span>Search</span>
+            <span class="kbd-shortcut">Ctrl+K</span>
+          </button>
+
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Switch Theme" title="Toggle Theme">
+            <span id="themeToggleIcon" aria-hidden="true">light mode</span>
+          </button>
+
+          <button class="menu-toggle-btn" id="menuToggle" aria-label="Open Mobile Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+    <div class="mobile-nav-drawer" id="mobileNav" role="navigation" aria-label="Mobile Navigation">
+      <a class="mobile-nav-link" href="#home">Home</a>
+      <a class="mobile-nav-link" href="#about">About</a>
+      <a class="mobile-nav-link" href="#terminal">Terminal CLI</a>
+      <a class="mobile-nav-link" href="#skills">Skills</a>
+      <a class="mobile-nav-link" href="#projects">Projects</a>
+      
+      <a class="mobile-nav-link" href="#contact">Contact & WhatsApp</a>
+    </div>
+
+    <!-- Main Content Flow -->
+    <main id="mainContent" role="main">
+      <!-- 1. Hero Section -->
+      <section id="home" class="hero" aria-label="Introduction">
+        <div class="container hero-grid">
+          <!-- Hero Copy -->
+          <div class="hero-content">
+            <div class="status-pill">
+              <span class="status-dot-pulse"></span>
+              <span>SYSTEM STATUS: ONLINE • B.TECH CSE (AI-ML)</span>
+            </div>
+
+            <p class="eyebrow">HELLO WORLD, I'M</p>
+            <h1 class="hero-name">
+              Tanmay <span class="gradient-text">Sheth</span>
+            </h1>
+
+            <div class="hero-role-wrapper">
+              <span>I'm a</span>
+              <span id="dynamicRole" class="dynamic-role">B.Tech CSE (AI-ML) Student</span>
+              <span class="cursor-blink" aria-hidden="true"></span>
+            </div>
+
+            <p class="hero-bio">
+              A computer science student at <strong>Adani University</strong> combining engineering foundations in
+              <strong>C, C++, and Python</strong> with modern full-stack web development, database management,
+              and machine learning exploration.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">
+                <span>Explore Projects</span>
+                <span aria-hidden="true">&darr;</span>
+              </a>
+              <a class="btn ghost" href="#terminal">
+                <span>Open Terminal</span>
+                <span aria-hidden="true">&gt;_</span>
+              </a>
+              <a class="btn ghost" href="#contact">
+                <span>Connect</span>
+                <span aria-hidden="true">&nearr;</span>
+              </a>
+            </div>
+
+            <div class="hero-social-strip">
+              <span>Find me on:</span>
+              <a class="hero-social-link" href="https://github.com/tanmaysheth1310" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="hero-social-link" href="https://www.linkedin.com/in/tanmay-sheth-5a4415384/" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a class="hero-social-link" href="https://www.instagram.com/tanmay_sheth1310/" target="_blank" rel="noopener">Instagram ↗</a>
+            </div>
+          </div>
+
+          <!-- Hero Profile Visual Showcase -->
+          <div class="hero-visual">
+            <div class="profile-card-container">
+              <div class="profile-backdrop-glow" aria-hidden="true"></div>
+
+              <!-- Floating Orbital Badges -->
+              <div class="orbital-badge badge-1" aria-hidden="true">
+                <span>🐍</span>
+                <span>Python & Data</span>
+              </div>
+              <div class="orbital-badge badge-2" aria-hidden="true">
+                <span>⚛️</span>
+                <span>Full-Stack Web</span>
+              </div>
+              <div class="orbital-badge badge-3" aria-hidden="true">
+                <span>🤖</span>
+                <span>AI / ML Focus</span>
+              </div>
+
+              <!-- Real Profile Frame -->
+              <div class="profile-frame">
+                <div class="profile-img-wrap">
+                  <img
+                    class="profile-img"
+                    src="{{ url_for('static', filename='images/profile.jpeg') }}"
+                    alt="Tanmay Sheth - Computer Science Student and Developer"
+                    width="400"
+                    height="460"
+                    loading="eager"
+                  >
+                </div>
+                <!-- University Badge Overlay -->
+                <div class="university-floating-badge">
+                  <div class="uni-title">
+                    <span>Adani University</span>
+                    <span class="cert-verified-pill">Verified Student</span>
+                  </div>
+                  <div class="uni-sub">B.Tech CSE (AI-ML) • 2nd Year • 3rd Sem</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Developer Telemetry Ribbon -->
+      <section class="telemetry-ribbon" aria-label="System Diagnostics">
+        <div class="container">
+          <div class="telemetry-grid">
+            <div class="telemetry-item">
+              <span class="telemetry-label">CORE FOCUS</span>
+              <span class="telemetry-value">Full-Stack Web & AI/ML</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">ACADEMIC TRAJECTORY</span>
+              <span class="telemetry-value">2nd Year CSE • Adani Uni</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">LOCATION</span>
+              <span class="telemetry-value">Ahmedabad, Gujarat, INDIA</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">DEPLOYMENT ARCHITECTURE</span>
+              <span class="telemetry-value">Python / Flask • Vercel Ready</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. About Section -->
+      <section id="about" class="section alt-bg" aria-label="About Tanmay Sheth">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">ABOUT ME</p>
+            <h2 class="section-title">
+              Curious mind. <span class="gradient-text">Builder mindset.</span>
+            </h2>
+            <p class="section-subtitle">
+              Bridging computer science fundamentals with hands-on web engineering, database architecture, and applied artificial intelligence.
+            </p>
+          </div>
+
+          <div class="about-narrative-grid">
+            <!-- Narrative Cards -->
+            <div class="story-cards-col">
+              <article class="story-card">
+                <div class="story-step">01 // WHO I AM</div>
+                <h3>Computer Science & Engineering Student</h3>
+                <p>
+                  I'm Tanmay Sheth, currently in my 2nd year (3rd semester) of B.Tech Computer Science and Engineering
+                  with specialization in Artificial Intelligence and Machine Learning at <strong>Adani University</strong> in Ahmedabad.
+                  I believe that true engineering excellence starts with a deep understanding of core programming logic, data structures, and systemic problem solving.
+                </p>
+              </article>
+
+              <article class="story-card">
+                <div class="story-step">02 // WHAT I'M LEARNING</div>
+                <h3>Foundations, Web Systems & AI Models</h3>
+                <p>
+                  My academic and self-directed path covers low-level programming in <strong>C and C++</strong>, rapid prototyping and data science with <strong>Python</strong>,
+                  structured query management in <strong>SQL</strong>, and scalable interface design using modern <strong>HTML5, CSS3, JavaScript, and React</strong>.
+                </p>
+              </article>
+
+              <article class="story-card">
+                <div class="story-step">03 // WHAT I'M BUILDING</div>
+                <h3>Applied Tools & Problem-Solving Prototypes</h3>
+                <p>
+                  From full-stack web applications with database backends to machine learning experiments and hackathon initiatives
+                  like the <em>Career & Education Advisor</em> concept for the Smart India Hackathon (SIH), I focus on creating software that delivers direct utility.
+                </p>
+              </article>
+
+              <article class="story-card">
+                <div class="story-step">04 // WHERE I'M HEADED</div>
+                <h3>Engineering Scalable, Intelligent Software</h3>
+                <p>
+                  My aspiration is to grow into an accomplished software engineer capable of architecting robust distributed web systems and deploying intelligent,
+                  practical AI/ML solutions that address meaningful challenges.
+                </p>
+              </article>
+            </div>
+
+            <!-- Fast Specs Column -->
+            <div class="about-specs-col">
+              <div class="specs-card">
+                <h3><span>⚡</span> Quick Specifications</h3>
+                <div class="spec-item">
+                  <span class="spec-key">Education</span>
+                  <span class="spec-val">B.Tech CSE (AI-ML)</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">Institution</span>
+                  <span class="spec-val">Adani University</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">Current Stage</span>
+                  <span class="spec-val">2nd Year • 3rd Sem</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">Location</span>
+                  <span class="spec-val">Ahmedabad, Gujarat, INDIA</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">Languages</span>
+                  <span class="spec-val">C, C++, Python, JS, SQL</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">Development Focus</span>
+                  <span class="spec-val">Full-Stack & AI/ML</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">Email</span>
+                  <span class="spec-val">tanmaysheth12@gmail.com</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">Availability</span>
+                  <span class="spec-val" style="color: var(--emerald);">Open to Collaborations</span>
+                </div>
+              </div>
+
+              <div class="specs-card" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(6, 182, 212, 0.05));">
+                <h3><span>💡</span> Core Strengths</h3>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                  Proactive communicator, quick learner of complex software frameworks, consistent analytical thinker, and disciplined student engineer committed to high code quality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Interactive Developer Terminal (CLI Shell) -->
+      <section id="terminal" class="section" aria-label="Interactive Terminal">
+        <div class="container">
+          <div class="section-head center">
+            <p class="eyebrow">INTERACTIVE CLI SHELL</p>
+            <h2 class="section-title">
+              Query the portfolio via <span class="gradient-text">Terminal</span>
+            </h2>
+            <p class="section-subtitle">
+              Prefer command-line interfaces? Run real commands to inspect background, explore tech stacks, launch project modals, check telemetry, or toggle themes.
+            </p>
+          </div>
+
+          <!-- Embedded Terminal Shell -->
+          <div class="terminal-window" id="developerTerminal">
+            <!-- Title Bar -->
+            <div class="terminal-titlebar">
+              <div class="terminal-controls" aria-hidden="true">
+                <span class="term-circle red"></span>
+                <span class="term-circle yellow"></span>
+                <span class="term-circle green"></span>
+              </div>
+              <div class="terminal-title">tanmay@sheth-dev: ~ (bash / zsh)</div>
+              <div class="terminal-actions-bar">
+                <button class="terminal-btn-clear" type="button" title="Clear terminal screen">Clear Buffer</button>
+              </div>
+            </div>
+
+            <!-- Quick Command Shortcuts Bar -->
+            <div class="terminal-quick-bar" aria-label="Terminal Command Shortcuts">
+              <span class="term-quick-label">Quick Commands:</span>
+              <button class="term-quick-chip" data-cmd="help">help</button>
+              <button class="term-quick-chip" data-cmd="about">about</button>
+              <button class="term-quick-chip" data-cmd="skills">skills</button>
+              <button class="term-quick-chip" data-cmd="projects">projects</button>
+              
+              <button class="term-quick-chip" data-cmd="status">status</button>
+              <button class="term-quick-chip" data-cmd="contact">contact</button>
+              <button class="term-quick-chip" data-cmd="theme">theme</button>
+              <button class="term-quick-chip" data-cmd="clear">clear</button>
+            </div>
+
+            <!-- Console Output Area -->
+            <div class="terminal-output" role="region" aria-live="polite" aria-label="Terminal Output"></div>
+
+            <!-- Input Row -->
+            <div class="terminal-input-row">
+              <span class="terminal-prompt-txt">tanmay@sheth:~$</span>
+              <input
+                class="terminal-input"
+                type="text"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                placeholder="Type 'help' and press Enter..."
+                aria-label="Terminal command input"
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Technical Skills Section -->
+      <section id="skills" class="section alt-bg" aria-label="Technical Toolbox">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">TECHNICAL TOOLBOX</p>
+            <h2 class="section-title">
+              Engineering Stack & <span class="gradient-text">Core Competencies</span>
+            </h2>
+            <p class="section-subtitle">
+              Rigorous fundamentals grounded in university coursework, certified industry training, and personal application building.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">C</span>
+                <span class="skill-category-badge">LANGUAGE</span>
+              </div>
+              <p class="skill-desc">Structured programming foundations, pointers, memory allocation, and algorithmic problem-solving fundamentals.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">C++</span>
+                <span class="skill-category-badge">LANGUAGE</span>
+              </div>
+              <p class="skill-desc">Object-oriented programming, standard template library (STL), data structures, and computational efficiency.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">Python</span>
+                <span class="skill-category-badge">AI / DATA</span>
+              </div>
+              <p class="skill-desc">Core language for machine learning experiments, data science scripting, backend logic, and quantitative analysis.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">HTML5</span>
+                <span class="skill-category-badge">FRONTEND</span>
+              </div>
+              <p class="skill-desc">Semantic document structuring, modern accessibility standards (a11y), SEO architecture, and web standards.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">CSS3</span>
+                <span class="skill-category-badge">FRONTEND</span>
+              </div>
+              <p class="skill-desc">Modern responsive styling, Flexbox, CSS Grid, custom properties, glassmorphic UI design, and GPU transitions.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">JavaScript</span>
+                <span class="skill-category-badge">FRONTEND</span>
+              </div>
+              <p class="skill-desc">Modern ES6+ syntax, asynchronous event handling, DOM manipulation, interactive web interfaces, and API integrations.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">React</span>
+                <span class="skill-category-badge">FRONTEND</span>
+              </div>
+              <p class="skill-desc">Component-driven architecture, modular state management, declarative rendering, and interactive single-page patterns.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">SQL</span>
+                <span class="skill-category-badge">DATABASE</span>
+              </div>
+              <p class="skill-desc">Relational database schema design, normalized data modeling, CRUD operations, joins, and indexing.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">Prompt Engineering</span>
+                <span class="skill-category-badge">AI / ML</span>
+              </div>
+              <p class="skill-desc">Certified through IBM/Cognitive Class. Few-shot prompt patterns, chain-of-thought workflows, and LLM optimization.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">Generative AI</span>
+                <span class="skill-category-badge">AI / ML</span>
+              </div>
+              <p class="skill-desc">Certified foundation in transformer architectures, deep learning principles, diffusion models, and multimodal AI.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">Data Analysis</span>
+                <span class="skill-category-badge">ANALYTICS</span>
+              </div>
+              <p class="skill-desc">Internship-verified capability in dataset processing, statistical metric calculation, cleaning, and reporting.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <span class="skill-card-name">Git & GitHub</span>
+                <span class="skill-category-badge">TOOLS</span>
+              </div>
+              <p class="skill-desc">Version control, branch management, collaborative pull requests, open-source workflows, and project hosting.</p>
+            </article>
+
+            <!-- Wide Ecosystem Highlights Banner -->
+            <div class="skill-highlight-card">
+              <div class="skill-highlight-left">
+                <h3>Engineering Triad: Frontend • Backend • Database Management</h3>
+                <p>Focused on writing maintainable software where user experience, business logic, and reliable data persistence function harmoniously.</p>
+              </div>
+              <a class="btn primary btn-sm" href="#contact">Discuss Tech Stack &nearr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Featured Projects Section -->
+      <section id="projects" class="section" aria-label="Projects Showcase">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">PROJECTS & CODE</p>
+            <h2 class="section-title">
+              Things I'm <span class="gradient-text">Building.</span>
+            </h2>
+            <p class="section-subtitle">
+              Highlights of practical software implementations, academic exploration, and hackathon prototypes.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 1: Web Application Project -->
+            <article class="project-card">
+              <div class="project-top-meta">
+                <span class="project-tag">WEB / DATABASE</span>
+                <span class="project-status">Active Codebase</span>
+              </div>
+              <h3 class="project-title">Web Application Project</h3>
+              <p class="project-desc">
+                A practical full-stack web application demonstrating frontend UI design, backend request handling, and relational database management.
+              </p>
+              <div class="project-stack-tags">
+                <span class="stack-tag">HTML5/CSS3</span>
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">SQL</span>
+                <span class="stack-tag">Backend</span>
+              </div>
+              <div class="project-card-actions">
+                <a class="project-link-primary" href="https://github.com/tanmaysheth1310" target="_blank" rel="noopener">
+                  <span>GitHub</span>
+                  <span aria-hidden="true">&nearr;</span>
+                </a>
+                <button class="project-btn-inspect" type="button" data-inspect-project="web_app">
+                  Quick Inspect
+                </button>
+              </div>
+            </article>
+
+            <!-- Project 2: AI/ML Learning Projects -->
+            <article class="project-card">
+              <div class="project-top-meta">
+                <span class="project-tag">AI / ML RESEARCH</span>
+                <span class="project-status">Research & Labs</span>
+              </div>
+              <h3 class="project-title">AI/ML Learning Projects</h3>
+              <p class="project-desc">
+                A growing repository of algorithmic implementations, Python data science scripts, prompt engineering experiments, and model explorations.
+              </p>
+              <div class="project-stack-tags">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">Data Science</span>
+                <span class="stack-tag">Prompt Eng</span>
+                <span class="stack-tag">Algorithms</span>
+              </div>
+              <div class="project-card-actions">
+                <a class="project-link-primary" href="https://github.com/tanmaysheth1310" target="_blank" rel="noopener">
+                  <span>GitHub</span>
+                  <span aria-hidden="true">&nearr;</span>
+                </a>
+                <button class="project-btn-inspect" type="button" data-inspect-project="aiml_learning">
+                  Quick Inspect
+                </button>
+              </div>
+            </article>
+
+            <!-- Project 3: Career & Education Advisor (SIH) -->
+            <article class="project-card">
+              <div class="project-top-meta">
+                <span class="project-tag">SIH / EDUCATION</span>
+                <span class="project-status">Hackathon Track</span>
+              </div>
+              <h3 class="project-title">Career & Education Advisor</h3>
+              <p class="project-desc">
+                An education-focused roadmap concept for personalized career guidance, curriculum trajectory planning, and skill discovery developed for hackathon initiatives.
+              </p>
+              <div class="project-stack-tags">
+                <span class="stack-tag">Education Tech</span>
+                <span class="stack-tag">Product Strategy</span>
+                <span class="stack-tag">SIH Track</span>
+              </div>
+              <div class="project-card-actions">
+                <a class="project-link-primary" href="#contact">
+                  <span>Inquire</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+                <button class="project-btn-inspect" type="button" data-inspect-project="sih_advisor">
+                  Quick Inspect
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- 8. Contact & WhatsApp Integration Section -->
+      <section id="contact" class="section" aria-label="Contact Information">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">COMMUNICATION CHANNELS</p>
+            <h2 class="section-title">
+              Have an idea or opportunity? <span class="gradient-text">Let's talk.</span>
+            </h2>
+            <p class="section-subtitle">
+              Whether you want to discuss full-stack software, internship opportunities, or AI/ML collaboration, my channels are open.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Left Column: Contact Channels & Bio -->
+            <div class="contact-info-card">
+              <h3>Direct Channels</h3>
+              <p>
+                Feel free to email me directly, reach out on WhatsApp, or connect on professional networks. I actively respond to student, developer, and recruiter inquiries.
+              </p>
+
+              <div class="contact-channels">
+                <div class="channel-item">
+                  <div class="channel-icon" aria-hidden="true">✉️</div>
+                  <div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">EMAIL ADDRESS</div>
+                    <a href="mailto:tanmaysheth12@gmail.com" style="font-weight: 600;">tanmaysheth12@gmail.com</a>
+                  </div>
+                  <button class="copy-email-btn" type="button" aria-label="Copy email address">Copy</button>
+                </div>
+
+                <div class="channel-item">
+                  <div class="channel-icon" aria-hidden="true">💬</div>
+                  <div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">WHATSAPP MESSENGER</div>
+                    <a href="https://wa.me/919274213780" target="_blank" rel="noopener" style="font-weight: 600;">+91 9274213780</a>
+                  </div>
+                </div>
+
+                <div class="channel-item">
+                  <div class="channel-icon" aria-hidden="true">⌖</div>
+                  <div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">LOCATION</div>
+                    <span style="font-weight: 600;">Ahmedabad, Gujarat, India</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">PROFESSIONAL PROFILES</div>
+                <div style="display: flex; gap: 16px; font-weight: 600; font-size: 0.9rem;">
+                  <a href="https://www.linkedin.com/in/tanmay-sheth-5a4415384/" target="_blank" rel="noopener" style="color: var(--accent-light);">LinkedIn ↗</a>
+                  <a href="https://github.com/tanmaysheth1310" target="_blank" rel="noopener" style="color: var(--accent-light);">GitHub ↗</a>
+                  <a href="https://www.instagram.com/tanmay_sheth1310/" target="_blank" rel="noopener" style="color: var(--accent-light);">Instagram ↗</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: WhatsApp Direct Messaging Studio -->
+            <div class="whatsapp-box">
+              <div class="whatsapp-box-head">
+                <h3 style="font-size: 1.3rem;">Instant WhatsApp Dispatch</h3>
+                <span class="wa-status-badge">Direct API</span>
+              </div>
+              <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 16px;">
+                Pick a quick conversation starter or write a custom message. Submitting opens WhatsApp directly with your message pre-loaded.
+              </p>
+
+              <!-- Quick Message Preset Chips -->
+              <div class="wa-preset-chips" aria-label="Pre-filled message options">
+                <button class="whatsapp-chip" type="button" data-text="Hi Tanmay, I visited your portfolio and would love to connect with you regarding your projects!">
+                  "Hi Tanmay, saw your portfolio!"
+                </button>
+                <button class="whatsapp-chip" type="button" data-text="Hi Tanmay, I saw your work in Web Development & AI/ML and would like to discuss a project collaboration.">
+                  "Discuss project collaboration"
+                </button>
+                <button class="whatsapp-chip" type="button" data-text="Hi Tanmay, I'd like to talk about an internship / opportunity for a computer science student.">
+                  "Inquire about opportunity"
+                </button>
+              </div>
+
+              <!-- Form -->
+              <form id="whatsappForm" class="whatsapp-form">
+                <div class="form-label-row">
+                  <label for="message" style="font-weight: 600;">Your Message</label>
+                  <span id="messageCharCount">0 characters</span>
+                </div>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="whatsapp-textarea"
+                  placeholder="Type your message for Tanmay here..."
+                  required
+                ></textarea>
+
+                <div class="whatsapp-form-footer">
+                  <span class="wa-privacy-note">
+                    No message is stored on web servers. WhatsApp client securely handles the communication.
+                  </span>
+                  <button class="btn primary" type="submit">
+                    <span>Send on WhatsApp</span>
+                    <span aria-hidden="true">↗</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div>
+          © 2026 Tanmay Sheth
+        </div>
+        <div class="footer-social-links">
+          <a href="mailto:tanmaysheth12@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/tanmay-sheth-5a4415384/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/tanmaysheth1310" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.instagram.com/tanmay_sheth1310/" target="_blank" rel="noopener">Instagram</a>
+          <a href="#home" style="color: var(--accent-light);">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Command Palette Modal Dialog (Ctrl + K) -->
+  <div class="modal-backdrop" id="commandPaletteModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Command Palette">
+    <div class="modal-container" style="max-width: 580px;">
+      <button class="modal-close-btn" id="cmdPaletteClose" type="button" aria-label="Close Command Palette">&times;</button>
+      <div class="palette-header">
+        <span aria-hidden="true" style="color: var(--cyan); font-size: 1.2rem;">⚡</span>
+        <input
+          type="text"
+          id="cmdPaletteInput"
+          class="palette-search-input"
+          placeholder="Type a command or jump to section..."
+          autocomplete="off"
+        >
+      </div>
+      <div class="palette-items-list" id="cmdItemList" role="listbox"></div>
+      <div style="padding: 10px 18px; background: rgba(0, 0, 0, 0.2); border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono);">
+        <span>Navigation: <kbd class="kbd-shortcut">&uarr;</kbd> <kbd class="kbd-shortcut">&darr;</kbd> to navigate</span>
+        <span>Select: <kbd class="kbd-shortcut">Enter</kbd></span>
+        <span>Close: <kbd class="kbd-shortcut">Esc</kbd></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Details Inspection Modal -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project Details">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="projectModalClose" type="button" aria-label="Close Project Details" onclick="closeProjectModal()">&times;</button>
+      <div class="modal-content-wrap" id="projectModalBody"></div>
+    </div>
+  </div>
+
+  
+
+  <!-- Toast Notification Feedback -->
+  <div class="portfolio-toast" id="portfolioToast" role="status" aria-live="polite"></div>
+
+  <!-- Application Scripts -->
+  <script src="{{ url_for('static', filename='js/terminal.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</body>
+</html>
