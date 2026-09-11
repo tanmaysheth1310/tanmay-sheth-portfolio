@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://https://tanmay-sheth-portfolio.vercel.app/sitemap.xml
