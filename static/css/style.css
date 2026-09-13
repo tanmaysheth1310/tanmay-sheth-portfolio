@@ -2017,3 +2017,962 @@ h1, h2, h3, h4, .brand-logo {
     display: none !important;
   }
 }
+/* ==========================================================================
+   MOBILE OPTIMIZATION PATCH
+   Tanmay Sheth Portfolio
+   Optimized for 320px - 767px screens
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+  /* -----------------------------------------------------------------------
+     GLOBAL MOBILE FIXES
+     ----------------------------------------------------------------------- */
+
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section {
+    width: 100%;
+    padding: 64px 0;
+    overflow: hidden;
+  }
+
+  /* Prevent long words/URLs from breaking the layout */
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a,
+  span {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     NAVBAR
+     ----------------------------------------------------------------------- */
+
+  .navbar-wrapper {
+    height: 68px;
+  }
+
+  :root {
+    --header-height: 68px;
+  }
+
+  .navbar {
+    min-width: 0;
+  }
+
+  .brand-logo {
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+
+  .nav-actions {
+    gap: 7px;
+    flex-shrink: 0;
+  }
+
+  .cmd-palette-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+    border-radius: var(--radius-md);
+  }
+
+  .cmd-palette-btn > span:first-child {
+    display: none;
+  }
+
+  .theme-toggle-btn {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .menu-toggle-btn {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .mobile-nav-drawer {
+    top: var(--header-height);
+    padding: 20px 18px 24px;
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     HERO
+     ----------------------------------------------------------------------- */
+
+  .hero {
+    min-height: auto;
+    padding: 50px 0 65px;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    width: 100%;
+  }
+
+  .hero-visual {
+    width: 100%;
+    order: -1;
+  }
+
+  .profile-card-container {
+    width: min(100%, 340px);
+    margin: 0 auto;
+  }
+
+  .profile-frame {
+    width: 100%;
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  .profile-img-wrap {
+    width: 100%;
+    height: min(400px, 105vw);
+    min-height: 300px;
+    border-radius: 16px;
+  }
+
+  .profile-backdrop-glow {
+    width: 280px;
+    height: 360px;
+    filter: blur(28px);
+  }
+
+  .university-floating-badge {
+    bottom: 16px;
+    width: calc(100% - 24px);
+    padding: 10px 14px;
+    border-radius: 12px;
+  }
+
+  .uni-title {
+    font-size: 0.82rem;
+  }
+
+  .uni-sub {
+    font-size: 0.68rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2.35rem, 12vw, 3.2rem);
+    line-height: 1.02;
+    margin-bottom: 14px;
+  }
+
+  .hero-role-wrapper {
+    display: block;
+    min-height: 0;
+    font-size: 1.08rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .hero-role-wrapper > * {
+    vertical-align: middle;
+  }
+
+  .hero-bio {
+    max-width: 100%;
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin-bottom: 26px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 auto;
+    min-width: 140px;
+  }
+
+  .hero-social-strip {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 0.82rem;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     BUTTONS
+     ----------------------------------------------------------------------- */
+
+  .btn {
+    min-height: 44px;
+    padding: 11px 17px;
+    font-size: 0.88rem;
+  }
+
+  .btn.btn-sm {
+    min-height: 40px;
+    padding: 8px 13px;
+    font-size: 0.8rem;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     SECTION HEADINGS
+     ----------------------------------------------------------------------- */
+
+  .section-head {
+    margin-bottom: 34px;
+  }
+
+  .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+    margin-bottom: 9px;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 9vw, 2.35rem);
+    line-height: 1.12;
+    margin-bottom: 10px;
+  }
+
+  .section-subtitle {
+    width: 100%;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     TELEMETRY
+     ----------------------------------------------------------------------- */
+
+  .telemetry-ribbon {
+    padding: 15px 0;
+  }
+
+  .telemetry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .telemetry-item {
+    min-width: 0;
+    padding: 12px 10px;
+  }
+
+  .telemetry-label {
+    font-size: 0.63rem;
+    letter-spacing: 0.05em;
+  }
+
+  .telemetry-value {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     ABOUT
+     ----------------------------------------------------------------------- */
+
+  .about-narrative-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .story-cards-col,
+  .about-specs-col {
+    width: 100%;
+    gap: 14px;
+  }
+
+  .story-card,
+  .specs-card {
+    width: 100%;
+    padding: 21px 18px;
+    border-radius: 16px;
+  }
+
+  .story-card:hover {
+    transform: none;
+  }
+
+  .story-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .story-card p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .specs-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+  }
+
+  .spec-item {
+    gap: 14px;
+    padding: 10px 0;
+    font-size: 0.82rem;
+  }
+
+  .spec-key {
+    flex: 0 0 auto;
+  }
+
+  .spec-val {
+    min-width: 0;
+    max-width: 62%;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     TERMINAL
+     ----------------------------------------------------------------------- */
+
+  .terminal-window {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .terminal-titlebar {
+    padding: 10px 12px;
+  }
+
+  .terminal-controls {
+    gap: 6px;
+  }
+
+  .term-circle {
+    width: 9px;
+    height: 9px;
+  }
+
+  .terminal-title {
+    font-size: 0.7rem;
+  }
+
+  .terminal-actions-bar {
+    gap: 4px;
+  }
+
+  .terminal-btn-clear {
+    font-size: 0.68rem;
+    padding: 4px 7px;
+  }
+
+  .terminal-quick-bar {
+    padding: 9px 12px;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .terminal-quick-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .term-quick-label {
+    font-size: 0.65rem;
+  }
+
+  .term-quick-chip {
+    font-size: 0.68rem;
+    padding: 4px 8px;
+  }
+
+  .terminal-output {
+    min-height: 220px;
+    max-height: 330px;
+    padding: 14px 13px;
+    font-size: 0.76rem;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+
+  .terminal-input-row {
+    padding: 10px 12px;
+    gap: 7px;
+  }
+
+  .terminal-prompt-txt {
+    font-size: 0.75rem;
+  }
+
+  .terminal-input {
+    min-width: 0;
+    font-size: 0.75rem;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     SKILLS
+     ----------------------------------------------------------------------- */
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .skill-card {
+    width: 100%;
+    padding: 18px;
+    border-radius: 15px;
+  }
+
+  .skill-card:hover {
+    transform: none;
+  }
+
+  .skill-card-name {
+    font-size: 1.08rem;
+  }
+
+  .skill-category-badge {
+    font-size: 0.64rem;
+    padding: 3px 7px;
+  }
+
+  .skill-desc {
+    font-size: 0.81rem;
+  }
+
+  .skill-highlight-card {
+    grid-column: auto;
+    width: 100%;
+    padding: 20px 18px;
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .skill-highlight-left h3 {
+    font-size: 1.08rem;
+  }
+
+  .skill-highlight-left p {
+    font-size: 0.82rem;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     PROJECTS
+     ----------------------------------------------------------------------- */
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-card {
+    width: 100%;
+    min-width: 0;
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  .project-top-meta {
+    margin-bottom: 14px;
+  }
+
+  .project-tag,
+  .project-status {
+    font-size: 0.66rem;
+  }
+
+  .project-title {
+    font-size: 1.22rem;
+    line-height: 1.25;
+    margin-bottom: 9px;
+  }
+
+  .project-desc {
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .project-stack-tags {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .stack-tag {
+    font-size: 0.68rem;
+    padding: 4px 8px;
+  }
+
+  .project-card-actions {
+    gap: 10px;
+    padding-top: 14px;
+  }
+
+  .project-link-primary {
+    font-size: 0.82rem;
+  }
+
+  .project-btn-inspect {
+    font-size: 0.74rem;
+    padding: 6px 9px;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     CERTIFICATES
+     ----------------------------------------------------------------------- */
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .certificate-card {
+    width: 100%;
+    padding: 21px 18px;
+    border-radius: 16px;
+  }
+
+  .certificate-card:hover {
+    transform: none;
+  }
+
+  .cert-card-title {
+    font-size: 1.08rem;
+  }
+
+  .cert-issuer {
+    font-size: 0.8rem;
+  }
+
+  .cert-date {
+    font-size: 0.72rem;
+  }
+
+  .cert-summary {
+    font-size: 0.82rem;
+  }
+
+  .cert-actions {
+    flex-wrap: wrap;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     CONTACT
+     ----------------------------------------------------------------------- */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-info-card,
+  .whatsapp-box {
+    width: 100%;
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .contact-info-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .contact-info-card p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 22px;
+  }
+
+  .contact-channels {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .channel-item {
+    min-width: 0;
+    gap: 10px;
+    font-size: 0.82rem;
+  }
+
+  .channel-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+  }
+
+  .copy-email-btn {
+    flex-shrink: 0;
+    margin-left: auto;
+    font-size: 0.68rem;
+    padding: 4px 7px;
+  }
+
+  .whatsapp-box-head {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .wa-status-badge {
+    font-size: 0.66rem;
+  }
+
+  .wa-preset-chips {
+    gap: 6px;
+  }
+
+  .whatsapp-chip {
+    font-size: 0.68rem;
+    padding: 5px 9px;
+  }
+
+  .whatsapp-textarea {
+    min-height: 130px;
+    padding: 13px;
+    font-size: 0.84rem;
+  }
+
+  .whatsapp-form-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .wa-privacy-note {
+    max-width: 100%;
+    font-size: 0.68rem;
+  }
+
+  .whatsapp-form-footer .btn {
+    width: 100%;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     FOOTER
+     ----------------------------------------------------------------------- */
+
+  .site-footer {
+    padding: 30px 0;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    font-size: 0.76rem;
+  }
+
+  .footer-social-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     MODALS
+     ----------------------------------------------------------------------- */
+
+  .modal-backdrop {
+    padding: 12px;
+    align-items: center;
+  }
+
+  .modal-container {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 24px);
+    border-radius: 16px;
+  }
+
+  .modal-content-wrap {
+    padding: 28px 18px 22px;
+  }
+
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    padding-right: 35px;
+  }
+
+  .modal-desc {
+    font-size: 0.86rem;
+    line-height: 1.6;
+  }
+
+  .modal-highlights {
+    font-size: 0.82rem;
+  }
+
+  .modal-highlights li {
+    gap: 7px;
+  }
+
+  .modal-actions {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .modal-actions .btn {
+    flex: 1 1 auto;
+  }
+
+  .cert-modal-header {
+    gap: 10px;
+  }
+
+  .cert-modal-btns {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .cert-embed-wrap {
+    height: 55vh;
+    min-height: 300px;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     TOAST
+     ----------------------------------------------------------------------- */
+
+  .portfolio-toast {
+    bottom: 18px;
+    width: calc(100% - 36px);
+    max-width: 360px;
+    padding: 11px 16px;
+    text-align: center;
+    font-size: 0.78rem;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     TOUCH DEVICES
+     Prevent desktop hover transforms from causing awkward mobile behavior
+     ----------------------------------------------------------------------- */
+
+  .profile-frame:hover,
+  .story-card:hover,
+  .skill-card:hover,
+  .project-card:hover,
+  .certificate-card:hover,
+  .btn.primary:hover,
+  .btn.ghost:hover {
+    transform: none;
+  }
+
+  .profile-frame:hover .profile-img {
+    transform: none;
+  }
+}
+
+
+/* ==========================================================================
+   EXTRA SMALL DEVICES
+   320px - 374px
+   ========================================================================== */
+
+@media (max-width: 374px) {
+
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .brand-logo {
+    font-size: 1.18rem;
+  }
+
+  .nav-actions {
+    gap: 5px;
+  }
+
+  .theme-toggle-btn,
+  .menu-toggle-btn,
+  .cmd-palette-btn {
+    width: 37px;
+    height: 37px;
+  }
+
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 55px;
+  }
+
+  .hero-name {
+    font-size: 2.15rem;
+  }
+
+  .hero-role-wrapper {
+    font-size: 1rem;
+  }
+
+  .hero-bio {
+    font-size: 0.88rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .profile-card-container {
+    width: min(100%, 300px);
+  }
+
+  .profile-img-wrap {
+    min-height: 280px;
+    height: 88vw;
+  }
+
+  .telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .telemetry-item {
+    padding: 9px 4px;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .story-card,
+  .specs-card,
+  .project-card,
+  .certificate-card,
+  .contact-info-card,
+  .whatsapp-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .copy-email-btn {
+    font-size: 0.62rem;
+    padding: 4px 6px;
+  }
+
+  .channel-item {
+    font-size: 0.76rem;
+  }
+}
+
+
+/* ==========================================================================
+   LANDSCAPE MOBILE
+   ========================================================================== */
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+  .hero {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+
+  .hero-grid {
+    gap: 30px;
+  }
+
+  .profile-card-container {
+    max-width: 280px;
+  }
+
+  .profile-img-wrap {
+    height: 300px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE SAFE AREA SUPPORT
+   ========================================================================== */
+
+@supports (padding: max(0px)) {
+
+  @media (max-width: 767px) {
+
+    .navbar-wrapper {
+      padding-left: max(0px, env(safe-area-inset-left));
+      padding-right: max(0px, env(safe-area-inset-right));
+    }
+
+    .site-footer {
+      padding-bottom: max(30px, env(safe-area-inset-bottom));
+    }
+
+  }
+}
